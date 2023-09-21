@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/full-hat/Documents/MyProjects/FHCrypto/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/fhcrypto.dir/28147-89-CFB-mode/main.cpp.o -c /Users/full-hat/Documents/MyProjects/FHCrypto/28147-89-CFB-mode/main.cpp",
+  "file": "/Users/full-hat/Documents/MyProjects/FHCrypto/28147-89-CFB-mode/main.cpp",
+  "output": "CMakeFiles/fhcrypto.dir/28147-89-CFB-mode/main.cpp.o"
+}
+]
