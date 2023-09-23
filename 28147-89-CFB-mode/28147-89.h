@@ -1,14 +1,20 @@
+#pragma once
+
 #include <_types/_uint32_t.h>
 #include <_types/_uint64_t.h>
 #include <array>
+#include <bitset>
 #include <cassert>
+#include <cstddef>
 #include <iostream>
 #include <sys/_types/_u_char.h>
 #include <sys/types.h>
+#include <tuple>
+#include <type_traits>
+#include <utility>
 #include <variant>
 #include <vector>
 
-#include "file.h"
 #include "consts.h"
 
 class GOST_28147_89
@@ -44,43 +50,45 @@ public:
         return result<<11 | result>>(32-11);
     }
 
+    template<typename T>
+    static void print(T value)
+    {
+        std::cout << std::bitset<sizeof(T) * 8>(value) << std::endl;
+    }
+
     static uint64_t FeistelNetEncrypt(uint64_t _lr, const std::array<uint32_t, 8> &_sub_keys)
     {
         // l is now lower part of lr
-        uint32_t l = (uint32_t)_lr;
-        uint32_t r = (uint32_t)(_lr >> 32);
+        uint32_t l = (uint32_t)(_lr >> 32);
+        uint32_t r = (uint32_t)_lr;
 
         for (int i = 0; i < 24; ++i)
         {
-            l = r;
-            r = l ^ F(r, _sub_keys[i&7]);
+            std::tie(l, r) = std::pair(r, l ^ F(r, _sub_keys[i&7]));
         }
         for (int i = 24; i < 32; ++i)
         {
-            l = r;
-            r = l ^ F(r, _sub_keys[7 ^ i&7]);
+            std::tie(l, r) = std::pair(r, l ^ F(r, _sub_keys[7 ^ i&7]));
         }
 
-        return ((uint64_t)l << 32) | (uint64_t)r;
+        return ((uint64_t)r << 32) | (uint64_t)l;
     }
 
     static uint64_t FeistelNetDecrypt(uint64_t _lr, const std::array<uint32_t, 8> &_sub_keys)
     {
         // l is now lower part of lr
-        uint32_t l = (uint32_t)_lr;
-        uint32_t r = (uint32_t)(_lr >> 32);
+        uint32_t l = (uint32_t)(_lr >> 32);
+        uint32_t r = (uint32_t)_lr;
 
         for (int i = 31; i >= 24; --i)
         {
-            l = r;
-            r = l ^ F(r, _sub_keys[7 ^ i&7]);
+            std::tie(l, r) = std::pair(r, l ^ F(r, _sub_keys[7 ^ i&7]));
         }
         for (int i = 23; i >= 0; --i)
         {
-            l = r;
-            r = l ^ F(r, _sub_keys[i&7]);
+            std::tie(l, r) = std::pair(r, l ^ F(r, _sub_keys[i&7]));
         }
 
-        return ((uint64_t)l << 32) | (uint64_t)r;
+        return ((uint64_t)r << 32) | (uint64_t)l;
     }
 };

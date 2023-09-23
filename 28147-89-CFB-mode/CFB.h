@@ -1,64 +1,69 @@
 #include "28147-89.h"
-#include "file.h"
 #include <_types/_uint32_t.h>
 #include <_types/_uint64_t.h>
 #include <algorithm>
 #include <array>
 #include <bitset>
+#include <cassert>
 #include <cstring>
+#include <utility>
 #include <vector>
 
 class GOST_28147_89_CFB : GOST_28147_89
 {
 public:
-    static uint64_t Iteration(uint64_t _gamma, uint64_t _plain_text, std::array<uint32_t, 8> &_sub_keys)
+    GOST_28147_89_CFB(const std::array<char, 32> &_key)
     {
-        const uint64_t encrypted_gamma = GOST_28147_89::FeistelNetDecrypt(_gamma, _sub_keys);
-
-        return _plain_text ^ encrypted_gamma;
+        m_sub_keys = SplitKey(_key);
     }
 
-    static void test()
+    std::vector<uint64_t> Encrypt(const std::vector<uint64_t> &_plain_text, uint64_t _gamma) const
     {
-        auto file = FileReader("/Users/full-hat/Documents/MyProjects/FHCrypto/28147-89-CFB-mode/text.txt");
+        std::vector<uint64_t> crypted_text(_plain_text.size());
 
-        uint64_t init_gamma = 0x11112234AAAA1113;
-
-        std::vector<uint64_t> text;
-
-        for (auto s : file.ReadBlock().first)
+        for (int i = 0; i < _plain_text.size(); ++i)
         {
-            std::cout << std::bitset<64>(s) << std::endl;
-            auto gamma = FeistelNetEncrypt(s, SplitKey({"0123456789012345678901234567890"}));
-
-            //init_gamma = s ^ gamma;
-
-            text.push_back(gamma);
+            _gamma = CryptText(_plain_text[i], _gamma);
+            crypted_text[i] = _gamma;
         }
 
-        WriteToFile(text, "/Users/full-hat/Documents/MyProjects/FHCrypto/28147-89-CFB-mode/encrypted.txt");
+        return crypted_text;
     }
 
-    static void untest()
+    std::vector<uint64_t> Decrypt(const std::vector<uint64_t> &_plain_text, uint64_t _gamma) const
     {
-        auto file = FileReader("/Users/full-hat/Documents/MyProjects/FHCrypto/28147-89-CFB-mode/encrypted.txt");
+        std::vector<uint64_t> decrypted_text(_plain_text.size());
 
-        uint64_t init_gamma = 0x11112234AAAA1113;
-
-        std::vector<uint64_t> text;
-
-        for (auto s : file.ReadBlock().first)
+        for (int i = 0; i < _plain_text.size(); ++i)
         {
-            auto key1 = SplitKey({"0123456789012345678901234567890"});
-            std::array<uint32_t, 8> key;
-            std::reverse_copy(key1.begin(), key1.end(), key.begin());
-            auto gamma = FeistelNetDecrypt(s, key);
-            std::cout << std::bitset<64>(s) << std::endl;
-            //init_gamma = s ^ gamma;
-
-            text.push_back(gamma);
+            auto next_gamma = _plain_text[i];
+            decrypted_text[i] = CryptText(_plain_text[i], _gamma);
+            _gamma = next_gamma;
         }
 
-        WriteToFile(text, "/Users/full-hat/Documents/MyProjects/FHCrypto/28147-89-CFB-mode/decrypted.txt");
+        return decrypted_text;
     }
+
+protected:
+    uint64_t CryptText(uint64_t _plain_text, uint64_t _gamma) const
+    {
+        return GOST_28147_89::FeistelNetEncrypt(_gamma, m_sub_keys) ^ _plain_text;
+    }
+
+    std::array<uint32_t, 8> m_sub_keys;
 };
+
+inline void test_CFB()
+{
+    std::array<char, 32> key { "MyVeryGoodKeyForEncryptionSomeS" };
+
+    GOST_28147_89_CFB crypter(key);
+    std::vector<uint64_t> data { 1, 1, 110 };
+    auto crypted = crypter.Encrypt(data, 0);
+    auto decrypted = crypter.Decrypt(crypted, 0);
+
+    for (int i = 0; i < crypted.size(); ++i)
+    {
+        assert(data[i] == decrypted[i]);
+    }
+}
