@@ -224,6 +224,9 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 //Path to a program.
 CMAKE_TAPI:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/tapi
 
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=/Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/scripts/buildsystems/vcpkg.cmake
+
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
@@ -237,60 +240,6 @@ COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
 //Extra command line flags to pass to the coverage tool
 COVERAGE_EXTRA_FLAGS:STRING=-l
 
-//Enable to build OSX bundles
-CPACK_BINARY_BUNDLE:BOOL=OFF
-
-//Enable to build Debian packages
-CPACK_BINARY_DEB:BOOL=OFF
-
-//Enable to build OSX Drag And Drop package
-CPACK_BINARY_DRAGNDROP:BOOL=OFF
-
-//Enable to build FreeBSD packages
-CPACK_BINARY_FREEBSD:BOOL=OFF
-
-//Enable to build IFW packages
-CPACK_BINARY_IFW:BOOL=OFF
-
-//Enable to build NSIS packages
-CPACK_BINARY_NSIS:BOOL=OFF
-
-//Enable to build productbuild packages
-CPACK_BINARY_PRODUCTBUILD:BOOL=OFF
-
-//Enable to build RPM packages
-CPACK_BINARY_RPM:BOOL=OFF
-
-//Enable to build STGZ packages
-CPACK_BINARY_STGZ:BOOL=ON
-
-//Enable to build TBZ2 packages
-CPACK_BINARY_TBZ2:BOOL=OFF
-
-//Enable to build TGZ packages
-CPACK_BINARY_TGZ:BOOL=ON
-
-//Enable to build TXZ packages
-CPACK_BINARY_TXZ:BOOL=OFF
-
-//Enable to build RPM source packages
-CPACK_SOURCE_RPM:BOOL=OFF
-
-//Enable to build TBZ2 source packages
-CPACK_SOURCE_TBZ2:BOOL=ON
-
-//Enable to build TGZ source packages
-CPACK_SOURCE_TGZ:BOOL=ON
-
-//Enable to build TXZ source packages
-CPACK_SOURCE_TXZ:BOOL=ON
-
-//Enable to build TZ source packages
-CPACK_SOURCE_TZ:BOOL=ON
-
-//Enable to build ZIP source packages
-CPACK_SOURCE_ZIP:BOOL=OFF
-
 //How many times to retry timed-out CTest submissions.
 CTEST_SUBMIT_RETRY_COUNT:STRING=3
 
@@ -303,8 +252,11 @@ DART_TESTING_TIMEOUT:STRING=1500
 //Path to a program.
 GITCOMMAND:FILEPATH=/usr/bin/git
 
+//The directory containing a CMake configuration file for GTest.
+GTest_DIR:PATH=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/share/gtest
+
 //Command to build the project
-MAKECOMMAND:STRING=/opt/homebrew/Cellar/cmake/3.27.4/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
+MAKECOMMAND:STRING=/opt/homebrew/Cellar/cmake/3.27.4/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 
 //Path to the memory checking command, used for memory error detection.
 MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
@@ -314,6 +266,71 @@ MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Name of the computer/site where compile is being run
 SITE:STRING=Full-Hats-MacBook-Pro.local
+
+//Automatically copy dependencies into the output directory for
+// executables.
+VCPKG_APPLOCAL_DEPS:BOOL=ON
+
+//Additional options to bootstrap vcpkg
+VCPKG_BOOTSTRAP_OPTIONS:STRING=
+
+//The directory which contains the installed libraries for each
+// triplet
+VCPKG_INSTALLED_DIR:PATH=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed
+
+//Additional install options to pass to vcpkg
+VCPKG_INSTALL_OPTIONS:STRING=
+
+//The path to the vcpkg manifest directory.
+VCPKG_MANIFEST_DIR:PATH=/Users/full-hat/Documents/MyProjects/FHCrypto
+
+//Install the dependencies listed in your manifest:
+//\n    If this is off, you will have to manually install your dependencies.
+//\n    See https://github.com/microsoft/vcpkg/tree/master/docs/specifications/manifests.md
+// for more info.
+//\n
+VCPKG_MANIFEST_INSTALL:BOOL=ON
+
+//Use manifest mode, as opposed to classic mode.
+VCPKG_MANIFEST_MODE:BOOL=ON
+
+//Overlay ports to use for vcpkg install in manifest mode
+VCPKG_OVERLAY_PORTS:STRING=
+
+//Overlay triplets to use for vcpkg install in manifest mode
+VCPKG_OVERLAY_TRIPLETS:STRING=
+
+//Appends the vcpkg paths to CMAKE_PREFIX_PATH, CMAKE_LIBRARY_PATH
+// and CMAKE_FIND_ROOT_PATH so that vcpkg libraries/packages are
+// found after toolchain/system libraries/packages.
+VCPKG_PREFER_SYSTEM_LIBS:BOOL=OFF
+
+//Enable the setup of CMAKE_PROGRAM_PATH to vcpkg paths
+VCPKG_SETUP_CMAKE_PROGRAM_PATH:BOOL=ON
+
+//Vcpkg target triplet (ex. x86-windows)
+VCPKG_TARGET_TRIPLET:STRING=arm64-osx
+
+//Trace calls to find_package()
+VCPKG_TRACE_FIND_PACKAGE:BOOL=OFF
+
+//Enables messages from the VCPKG toolchain for debugging purposes.
+VCPKG_VERBOSE:BOOL=OFF
+
+//(experimental) Automatically copy dependencies into the install
+// target directory for executables. Requires CMake 3.14.
+X_VCPKG_APPLOCAL_DEPS_INSTALL:BOOL=OFF
+
+//(experimental) Add USES_TERMINAL to VCPKG_APPLOCAL_DEPS to force
+// serialization.
+X_VCPKG_APPLOCAL_DEPS_SERIALIZED:BOOL=OFF
+
+//Path to a program.
+Z_VCPKG_CL:FILEPATH=Z_VCPKG_CL-NOTFOUND
+
+//The directory which contains the installed libraries for each
+// triplet
+_VCPKG_INSTALLED_DIR:PATH=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed
 
 //Value Computed by CMake
 fhcrypto_BINARY_DIR:STATIC=/Users/full-hat/Documents/MyProjects/FHCrypto/build
@@ -347,8 +364,6 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/opt/homebrew/Cellar/cmake/3.27.4/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/opt/homebrew/Cellar/cmake/3.27.4/bin/cpack
-//ADVANCED property for variable: CMAKE_CTEST_COMMAND
-CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/opt/homebrew/Cellar/cmake/3.27.4/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER
@@ -401,6 +416,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto
@@ -464,6 +481,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_TAPI
 CMAKE_TAPI-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_TOOLCHAIN_FILE
+CMAKE_TOOLCHAIN_FILE-ADVANCED:INTERNAL=1
 //uname command
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
@@ -472,48 +491,14 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 COVERAGE_COMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
 COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_BUNDLE
-CPACK_BINARY_BUNDLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_DEB
-CPACK_BINARY_DEB-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_DRAGNDROP
-CPACK_BINARY_DRAGNDROP-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_FREEBSD
-CPACK_BINARY_FREEBSD-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_IFW
-CPACK_BINARY_IFW-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_NSIS
-CPACK_BINARY_NSIS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_PRODUCTBUILD
-CPACK_BINARY_PRODUCTBUILD-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_RPM
-CPACK_BINARY_RPM-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_STGZ
-CPACK_BINARY_STGZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_TBZ2
-CPACK_BINARY_TBZ2-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_TGZ
-CPACK_BINARY_TGZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_BINARY_TXZ
-CPACK_BINARY_TXZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_RPM
-CPACK_SOURCE_RPM-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TBZ2
-CPACK_SOURCE_TBZ2-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TGZ
-CPACK_SOURCE_TGZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TXZ
-CPACK_SOURCE_TXZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_TZ
-CPACK_SOURCE_TZ-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CPACK_SOURCE_ZIP
-CPACK_SOURCE_ZIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
 CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
 CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DART_TESTING_TIMEOUT
 DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GITCOMMAND
 GITCOMMAND-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MAKECOMMAND
@@ -524,4 +509,10 @@ MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
 MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SITE
 SITE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: VCPKG_VERBOSE
+VCPKG_VERBOSE-ADVANCED:INTERNAL=1
+//Making sure VCPKG_MANIFEST_MODE doesn't change
+Z_VCPKG_CHECK_MANIFEST_MODE:INTERNAL=ON
+//Vcpkg root directory
+Z_VCPKG_ROOT_DIR:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg
 

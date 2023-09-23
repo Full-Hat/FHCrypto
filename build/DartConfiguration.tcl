@@ -28,7 +28,7 @@ NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
 ConfigureCommand: "/opt/homebrew/Cellar/cmake/3.27.4/bin/cmake" "/Users/full-hat/Documents/MyProjects/FHCrypto"
-MakeCommand: /opt/homebrew/Cellar/cmake/3.27.4/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
+MakeCommand: /opt/homebrew/Cellar/cmake/3.27.4/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
 # version control
