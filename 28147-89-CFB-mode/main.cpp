@@ -19,8 +19,8 @@ int main(int argc, char** argv)
     const auto file_data = file.ReadBlock_64();
     
     GOST_28147_89_CFB cfb(key);
-    auto encrypted = cfb.Encrypt(file_data.first, 0);
-    auto decrypted = cfb.Decrypt(encrypted, 0);
+    auto encrypted = cfb.Encrypt(file_data.first, 1);
+    auto decrypted = cfb.Decrypt(encrypted, 1);
 
     WriteToFile(encrypted, file_to_write_encrypted, file_data.second);
     WriteToFile(decrypted, file_to_write_decrypted, file_data.second);

@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = /Users/full-hat/Documents/MyProjects/FHCrypto/build
 all: CMakeFiles/test_GOST_28147_89.dir/all
 all: CMakeFiles/test_utils.dir/all
 all: CMakeFiles/GOST_28147_89.dir/all
+all: CMakeFiles/STB.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -76,6 +77,7 @@ preinstall:
 clean: CMakeFiles/test_GOST_28147_89.dir/clean
 clean: CMakeFiles/test_utils.dir/clean
 clean: CMakeFiles/GOST_28147_89.dir/clean
+clean: CMakeFiles/STB.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -85,7 +87,7 @@ clean: CMakeFiles/GOST_28147_89.dir/clean
 CMakeFiles/test_GOST_28147_89.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_GOST_28147_89.dir/build.make CMakeFiles/test_GOST_28147_89.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_GOST_28147_89.dir/build.make CMakeFiles/test_GOST_28147_89.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/full-hat/Documents/MyProjects/FHCrypto/build/CMakeFiles --progress-num=3,4 "Built target test_GOST_28147_89"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/full-hat/Documents/MyProjects/FHCrypto/build/CMakeFiles --progress-num=5,6 "Built target test_GOST_28147_89"
 .PHONY : CMakeFiles/test_GOST_28147_89.dir/all
 
 # Build rule for subdir invocation for target.
@@ -111,7 +113,7 @@ CMakeFiles/test_GOST_28147_89.dir/clean:
 CMakeFiles/test_utils.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_utils.dir/build.make CMakeFiles/test_utils.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_utils.dir/build.make CMakeFiles/test_utils.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/full-hat/Documents/MyProjects/FHCrypto/build/CMakeFiles --progress-num=5,6 "Built target test_utils"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/full-hat/Documents/MyProjects/FHCrypto/build/CMakeFiles --progress-num=7,8 "Built target test_utils"
 .PHONY : CMakeFiles/test_utils.dir/all
 
 # Build rule for subdir invocation for target.
@@ -155,6 +157,32 @@ GOST_28147_89: CMakeFiles/GOST_28147_89.dir/rule
 CMakeFiles/GOST_28147_89.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOST_28147_89.dir/build.make CMakeFiles/GOST_28147_89.dir/clean
 .PHONY : CMakeFiles/GOST_28147_89.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/STB.dir
+
+# All Build rule for target.
+CMakeFiles/STB.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB.dir/build.make CMakeFiles/STB.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB.dir/build.make CMakeFiles/STB.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/full-hat/Documents/MyProjects/FHCrypto/build/CMakeFiles --progress-num=3,4 "Built target STB"
+.PHONY : CMakeFiles/STB.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/STB.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/full-hat/Documents/MyProjects/FHCrypto/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/STB.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/full-hat/Documents/MyProjects/FHCrypto/build/CMakeFiles 0
+.PHONY : CMakeFiles/STB.dir/rule
+
+# Convenience name for target.
+STB: CMakeFiles/STB.dir/rule
+.PHONY : STB
+
+# clean rule for target.
+CMakeFiles/STB.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB.dir/build.make CMakeFiles/STB.dir/clean
+.PHONY : CMakeFiles/STB.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

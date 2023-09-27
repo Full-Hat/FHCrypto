@@ -21,4 +21,8 @@ add_test(test_utils.exe test_utils)
 
 add_executable(GOST_28147_89 28147-89-CFB-mode/main.cpp)
 
+# STB 34 101 31
+add_executable(STB STB-34-101-31/main.cpp
+                    )
+
 include_directories(${CMAKE_SOURCE_DIR}/utils/)

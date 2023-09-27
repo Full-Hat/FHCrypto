@@ -165,6 +165,19 @@ GOST_28147_89/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GOST_28147_89.dir/build.make CMakeFiles/GOST_28147_89.dir/build
 .PHONY : GOST_28147_89/fast
 
+#=============================================================================
+# Target rules for targets named STB
+
+# Build rule for target.
+STB: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 STB
+.PHONY : STB
+
+# fast build rule for target.
+STB/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB.dir/build.make CMakeFiles/STB.dir/build
+.PHONY : STB/fast
+
 28147-89-CFB-mode/main.o: 28147-89-CFB-mode/main.cpp.o
 .PHONY : 28147-89-CFB-mode/main.o
 
@@ -213,6 +226,30 @@ GOST_28147_89/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_GOST_28147_89.dir/build.make CMakeFiles/test_GOST_28147_89.dir/28147-89-CFB-mode/test.cpp.s
 .PHONY : 28147-89-CFB-mode/test.cpp.s
 
+STB-34-101-31/main.o: STB-34-101-31/main.cpp.o
+.PHONY : STB-34-101-31/main.o
+
+# target to build an object file
+STB-34-101-31/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB.dir/build.make CMakeFiles/STB.dir/STB-34-101-31/main.cpp.o
+.PHONY : STB-34-101-31/main.cpp.o
+
+STB-34-101-31/main.i: STB-34-101-31/main.cpp.i
+.PHONY : STB-34-101-31/main.i
+
+# target to preprocess a source file
+STB-34-101-31/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB.dir/build.make CMakeFiles/STB.dir/STB-34-101-31/main.cpp.i
+.PHONY : STB-34-101-31/main.cpp.i
+
+STB-34-101-31/main.s: STB-34-101-31/main.cpp.s
+.PHONY : STB-34-101-31/main.s
+
+# target to generate assembly for a file
+STB-34-101-31/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB.dir/build.make CMakeFiles/STB.dir/STB-34-101-31/main.cpp.s
+.PHONY : STB-34-101-31/main.cpp.s
+
 utils/test.o: utils/test.cpp.o
 .PHONY : utils/test.o
 
@@ -247,6 +284,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... GOST_28147_89"
+	@echo "... STB"
 	@echo "... test_GOST_28147_89"
 	@echo "... test_utils"
 	@echo "... 28147-89-CFB-mode/main.o"
@@ -255,6 +293,9 @@ help:
 	@echo "... 28147-89-CFB-mode/test.o"
 	@echo "... 28147-89-CFB-mode/test.i"
 	@echo "... 28147-89-CFB-mode/test.s"
+	@echo "... STB-34-101-31/main.o"
+	@echo "... STB-34-101-31/main.i"
+	@echo "... STB-34-101-31/main.s"
 	@echo "... utils/test.o"
 	@echo "... utils/test.i"
 	@echo "... utils/test.s"

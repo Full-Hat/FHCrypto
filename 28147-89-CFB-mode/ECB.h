@@ -1,5 +1,4 @@
 #include "28147-89.h"
-#include <_types/_uint64_t.h>
 #include <cassert>
 
 class GOST_28147_89_ECB : protected GOST_28147_89

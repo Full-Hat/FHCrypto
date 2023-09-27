@@ -24,11 +24,39 @@
 	ProcessorClockFrequency="0"
 	>
 	<Testing>
-		<StartDateTime>Sep 23 12:16 PDT</StartDateTime>
-		<StartTestTime>1695496614</StartTestTime>
-		<TestList/>
-		<EndDateTime>Sep 23 12:16 PDT</EndDateTime>
-		<EndTestTime>1695496614</EndTestTime>
+		<StartDateTime>Sep 23 12:24 PDT</StartDateTime>
+		<StartTestTime>1695497074</StartTestTime>
+		<TestList>
+			<Test>./test_utils.exe</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test_utils.exe</Name>
+			<Path>.</Path>
+			<FullName>./test_utils.exe</FullName>
+			<FullCommandLine>/Users/full-hat/Documents/MyProjects/FHCrypto/build/test_utils</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0426463</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/Users/full-hat/Documents/MyProjects/FHCrypto/build/test_utils</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyNkbsOwjAMRfd8hcd2aKQWxGNgAPEYkAC1MFUdAjUoIk1QmsLv05cqqITInez4+Ea241mnBMJCSi5vEIDB3ORw1SoDv04gL7hBSmKvUwIboc5MNHWUT66VzFCWLBqvePTgL9M1FxgiS1Efy0cSQ3jaQa2kV6NVuBDqcp+0aKP99h8KTjCGLHft3EdDe/uGBccPGn/LMcEZTMsGMMow4RK7XRpk2kvVS5L481Q/TwSaSdr7qRzqMI+i1bJaQNtJyRtas5vZ====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Sep 23 12:24 PDT</EndDateTime>
+		<EndTestTime>1695497074</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

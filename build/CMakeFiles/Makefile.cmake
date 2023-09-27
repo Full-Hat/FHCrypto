@@ -66,4 +66,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_GOST_28147_89.dir/DependInfo.cmake"
   "CMakeFiles/test_utils.dir/DependInfo.cmake"
   "CMakeFiles/GOST_28147_89.dir/DependInfo.cmake"
+  "CMakeFiles/STB.dir/DependInfo.cmake"
   )
