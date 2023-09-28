@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20230927-2116-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.27.4"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="macOS"
+	Hostname="Full-Hats-MacBook-Pro.local"
+	OSRelease="13.5"
+	OSVersion="22G74"
+	OSPlatform="arm64"
+	Is64Bits="1"
+	VendorString="IBM"
+	VendorID="IBM"
+	FamilyID="16777228"
+	ModelID="2"
+	ProcessorCacheSize="131072"
+	NumberOfLogicalCPU="10"
+	NumberOfPhysicalCPU="10"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="16384"
+	LogicalProcessorsPerPhysical="10"
+	ProcessorClockFrequency="0"
+	>
+	<Testing>
+		<StartDateTime>Sep 27 16:30 PDT</StartDateTime>
+		<StartTestTime>1695857450</StartTestTime>
+		<TestList>
+			<Test>./test_STB.exe</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test_STB.exe</Name>
+			<Path>.</Path>
+			<FullName>./test_STB.exe</FullName>
+			<FullCommandLine>/Users/full-hat/Documents/MyProjects/FHCrypto/build/test_STB</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.00526008</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/Users/full-hat/Documents/MyProjects/FHCrypto/build/test_STB</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJx1jj0LwjAQQPf+iht1MNeiog4OYhUXQSpOIpLGNEbTRHJJwX/vJwUHb7k7eA9eEa3VVkHNte10ofKuBtyR9IRVNKZ35gFzJ2ItbSBc3zfeXaR4nsvV3N9vwWEjbleFZdTmFLyUhCpICkheYJOxbMDSXimqSX/YH/ExE0Zyi8o5ZWTLvY3jK4EJkeyn7Ryg+Pal8GLoE/h5gKJ+bvYr/AfBc8ugk0JNEFzgppvsATaz7XaRA7QmSx73h1wF====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Sep 27 16:30 PDT</EndDateTime>
+		<EndTestTime>1695857450</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

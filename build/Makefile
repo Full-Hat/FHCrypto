@@ -166,6 +166,19 @@ GOST_28147_89/fast:
 .PHONY : GOST_28147_89/fast
 
 #=============================================================================
+# Target rules for targets named test_STB
+
+# Build rule for target.
+test_STB: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_STB
+.PHONY : test_STB
+
+# fast build rule for target.
+test_STB/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_STB.dir/build.make CMakeFiles/test_STB.dir/build
+.PHONY : test_STB/fast
+
+#=============================================================================
 # Target rules for targets named STB
 
 # Build rule for target.
@@ -177,6 +190,19 @@ STB: cmake_check_build_system
 STB/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB.dir/build.make CMakeFiles/STB.dir/build
 .PHONY : STB/fast
+
+#=============================================================================
+# Target rules for targets named rabin
+
+# Build rule for target.
+rabin: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rabin
+.PHONY : rabin
+
+# fast build rule for target.
+rabin/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabin.dir/build.make CMakeFiles/rabin.dir/build
+.PHONY : rabin/fast
 
 28147-89-CFB-mode/main.o: 28147-89-CFB-mode/main.cpp.o
 .PHONY : 28147-89-CFB-mode/main.o
@@ -250,6 +276,54 @@ STB-34-101-31/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/STB.dir/build.make CMakeFiles/STB.dir/STB-34-101-31/main.cpp.s
 .PHONY : STB-34-101-31/main.cpp.s
 
+STB-34-101-31/test.o: STB-34-101-31/test.cpp.o
+.PHONY : STB-34-101-31/test.o
+
+# target to build an object file
+STB-34-101-31/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_STB.dir/build.make CMakeFiles/test_STB.dir/STB-34-101-31/test.cpp.o
+.PHONY : STB-34-101-31/test.cpp.o
+
+STB-34-101-31/test.i: STB-34-101-31/test.cpp.i
+.PHONY : STB-34-101-31/test.i
+
+# target to preprocess a source file
+STB-34-101-31/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_STB.dir/build.make CMakeFiles/test_STB.dir/STB-34-101-31/test.cpp.i
+.PHONY : STB-34-101-31/test.cpp.i
+
+STB-34-101-31/test.s: STB-34-101-31/test.cpp.s
+.PHONY : STB-34-101-31/test.s
+
+# target to generate assembly for a file
+STB-34-101-31/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_STB.dir/build.make CMakeFiles/test_STB.dir/STB-34-101-31/test.cpp.s
+.PHONY : STB-34-101-31/test.cpp.s
+
+rabin/main.o: rabin/main.cpp.o
+.PHONY : rabin/main.o
+
+# target to build an object file
+rabin/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabin.dir/build.make CMakeFiles/rabin.dir/rabin/main.cpp.o
+.PHONY : rabin/main.cpp.o
+
+rabin/main.i: rabin/main.cpp.i
+.PHONY : rabin/main.i
+
+# target to preprocess a source file
+rabin/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabin.dir/build.make CMakeFiles/rabin.dir/rabin/main.cpp.i
+.PHONY : rabin/main.cpp.i
+
+rabin/main.s: rabin/main.cpp.s
+.PHONY : rabin/main.s
+
+# target to generate assembly for a file
+rabin/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabin.dir/build.make CMakeFiles/rabin.dir/rabin/main.cpp.s
+.PHONY : rabin/main.cpp.s
+
 utils/test.o: utils/test.cpp.o
 .PHONY : utils/test.o
 
@@ -285,7 +359,9 @@ help:
 	@echo "... test"
 	@echo "... GOST_28147_89"
 	@echo "... STB"
+	@echo "... rabin"
 	@echo "... test_GOST_28147_89"
+	@echo "... test_STB"
 	@echo "... test_utils"
 	@echo "... 28147-89-CFB-mode/main.o"
 	@echo "... 28147-89-CFB-mode/main.i"
@@ -296,6 +372,12 @@ help:
 	@echo "... STB-34-101-31/main.o"
 	@echo "... STB-34-101-31/main.i"
 	@echo "... STB-34-101-31/main.s"
+	@echo "... STB-34-101-31/test.o"
+	@echo "... STB-34-101-31/test.i"
+	@echo "... STB-34-101-31/test.s"
+	@echo "... rabin/main.o"
+	@echo "... rabin/main.i"
+	@echo "... rabin/main.s"
 	@echo "... utils/test.o"
 	@echo "... utils/test.i"
 	@echo "... utils/test.s"

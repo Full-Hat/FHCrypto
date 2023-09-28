@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fhcrypto",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GOST_28147_89::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GOST_28147_89-Debug-f1a4df7705b029cfb5bb.json",
+					"name" : "GOST_28147_89",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "STB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-STB-Debug-89c241596268ed5cd6e8.json",
+					"name" : "STB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rabin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rabin-Debug-572f659f2dd6b57cab89.json",
+					"name" : "rabin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_GOST_28147_89::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_GOST_28147_89-Debug-d7d88b38be7cb9133ba4.json",
+					"name" : "test_GOST_28147_89",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_STB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_STB-Debug-ebe78f7b072b809ba84f.json",
+					"name" : "test_STB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_utils::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_utils-Debug-385cce9c62cc3ee2efcd.json",
+					"name" : "test_utils",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/full-hat/Documents/MyProjects/FHCrypto/build",
+		"source" : "/Users/full-hat/Documents/MyProjects/FHCrypto"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

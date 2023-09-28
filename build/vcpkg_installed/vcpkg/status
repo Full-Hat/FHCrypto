@@ -22,3 +22,21 @@ Abi: 9f7e48d982d6694bc333c3b8cc139261427280bbce5e8dba171eb1bcd3228426
 Description: GoogleTest and GoogleMock testing frameworks
 Status: install ok installed
 
+Package: vcpkg-cmake-get-vars
+Version: 2023-03-02
+Depends: vcpkg-cmake
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 94d553b24608a726e1890624df21f02a4b743b668f0dc7b36db1b44b7d85370a
+Status: install ok installed
+
+Package: gmp
+Version: 6.2.1
+Port-Version: 21
+Depends: vcpkg-cmake-get-vars
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 26d9e581d690497b309f782ad97262d32b81b9aa4085efcb0a80980a5d2ddc47
+Description: The GNU Multiple Precision Arithmetic Library
+Status: install ok installed
+

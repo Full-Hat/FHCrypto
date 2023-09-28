@@ -38,6 +38,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/homebrew/Cellar/cmake/3.27.4/share/cmake/Modules/Compiler/GNU.cmake"
   "/opt/homebrew/Cellar/cmake/3.27.4/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
   "/opt/homebrew/Cellar/cmake/3.27.4/share/cmake/Modules/FindPackageMessage.cmake"
+  "/opt/homebrew/Cellar/cmake/3.27.4/share/cmake/Modules/FindPkgConfig.cmake"
   "/opt/homebrew/Cellar/cmake/3.27.4/share/cmake/Modules/FindThreads.cmake"
   "/opt/homebrew/Cellar/cmake/3.27.4/share/cmake/Modules/Internal/CheckSourceCompiles.cmake"
   "/opt/homebrew/Cellar/cmake/3.27.4/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake"
@@ -66,5 +67,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_GOST_28147_89.dir/DependInfo.cmake"
   "CMakeFiles/test_utils.dir/DependInfo.cmake"
   "CMakeFiles/GOST_28147_89.dir/DependInfo.cmake"
+  "CMakeFiles/test_STB.dir/DependInfo.cmake"
   "CMakeFiles/STB.dir/DependInfo.cmake"
+  "CMakeFiles/rabin.dir/DependInfo.cmake"
   )

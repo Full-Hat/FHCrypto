@@ -14,9 +14,6 @@
 # EXTERNAL cache entries
 ########################
 
-//Build the testing tree.
-BUILD_TESTING:BOOL=ON
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -233,39 +230,14 @@ CMAKE_TOOLCHAIN_FILE:FILEPATH=/Users/full-hat/Documents/MyProjects/FHCrypto/vcpk
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Path to the coverage program that CTest uses for performing coverage
-// inspection
-COVERAGE_COMMAND:FILEPATH=/usr/bin/gcov
-
-//Extra command line flags to pass to the coverage tool
-COVERAGE_EXTRA_FLAGS:STRING=-l
-
-//How many times to retry timed-out CTest submissions.
-CTEST_SUBMIT_RETRY_COUNT:STRING=3
-
-//How long to wait between timed-out CTest submissions.
-CTEST_SUBMIT_RETRY_DELAY:STRING=5
-
-//Maximum time allowed before CTest will kill the test.
-DART_TESTING_TIMEOUT:STRING=1500
-
-//Path to a program.
-GITCOMMAND:FILEPATH=/usr/bin/git
-
 //The directory containing a CMake configuration file for GTest.
 GTest_DIR:PATH=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/share/gtest
 
-//Command to build the project
-MAKECOMMAND:STRING=/opt/homebrew/Cellar/cmake/3.27.4/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
 
-//Path to the memory checking command, used for memory error detection.
-MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
-
-//File that contains suppressions for the memory checker
-MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
-
-//Name of the computer/site where compile is being run
-SITE:STRING=Full-Hats-MacBook-Pro.local
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/opt/homebrew/bin/pkg-config
 
 //Automatically copy dependencies into the output directory for
 // executables.
@@ -340,6 +312,15 @@ fhcrypto_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 fhcrypto_SOURCE_DIR:STATIC=/Users/full-hat/Documents/MyProjects/FHCrypto
+
+//Path to a library.
+pkgcfg_lib_gmp_gmp:FILEPATH=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/libgmp.a
+
+//Path to a library.
+pkgcfg_lib_gmpxx_gmp:FILEPATH=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/libgmp.a
+
+//Path to a library.
+pkgcfg_lib_gmpxx_gmpxx:FILEPATH=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/libgmpxx.a
 
 
 ########################
@@ -487,32 +468,99 @@ CMAKE_TOOLCHAIN_FILE-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: COVERAGE_COMMAND
-COVERAGE_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: COVERAGE_EXTRA_FLAGS
-COVERAGE_EXTRA_FLAGS-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CTEST_SUBMIT_RETRY_COUNT
-CTEST_SUBMIT_RETRY_COUNT-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: CTEST_SUBMIT_RETRY_DELAY
-CTEST_SUBMIT_RETRY_DELAY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: DART_TESTING_TIMEOUT
-DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/opt/homebrew/bin/pkg-config][v0.29.2()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//ADVANCED property for variable: GITCOMMAND
-GITCOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MAKECOMMAND
-MAKECOMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MEMORYCHECK_COMMAND
-MEMORYCHECK_COMMAND-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: MEMORYCHECK_SUPPRESSIONS_FILE
-MEMORYCHECK_SUPPRESSIONS_FILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: SITE
-SITE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VCPKG_VERBOSE
 VCPKG_VERBOSE-ADVANCED:INTERNAL=1
 //Making sure VCPKG_MANIFEST_MODE doesn't change
 Z_VCPKG_CHECK_MANIFEST_MODE:INTERNAL=ON
 //Vcpkg root directory
 Z_VCPKG_ROOT_DIR:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg
+__pkg_config_arguments_gmp:INTERNAL=REQUIRED;IMPORTED_TARGET;gmp
+__pkg_config_arguments_gmpxx:INTERNAL=REQUIRED;IMPORTED_TARGET;gmpxx
+__pkg_config_checked_gmp:INTERNAL=1
+__pkg_config_checked_gmpxx:INTERNAL=1
+gmp_CFLAGS:INTERNAL=-I/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../../include
+gmp_CFLAGS_I:INTERNAL=
+gmp_CFLAGS_OTHER:INTERNAL=
+gmp_FOUND:INTERNAL=1
+gmp_INCLUDEDIR:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../../include
+gmp_INCLUDE_DIRS:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../../include
+gmp_LDFLAGS:INTERNAL=-L/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib;-lgmp
+gmp_LDFLAGS_OTHER:INTERNAL=
+gmp_LIBDIR:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib
+gmp_LIBRARIES:INTERNAL=gmp
+gmp_LIBRARY_DIRS:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib
+gmp_LIBS:INTERNAL=
+gmp_LIBS_L:INTERNAL=
+gmp_LIBS_OTHER:INTERNAL=
+gmp_LIBS_PATHS:INTERNAL=
+gmp_MODULE_NAME:INTERNAL=gmp
+gmp_PREFIX:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../..
+gmp_STATIC_CFLAGS:INTERNAL=-I/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../../include
+gmp_STATIC_CFLAGS_I:INTERNAL=
+gmp_STATIC_CFLAGS_OTHER:INTERNAL=
+gmp_STATIC_INCLUDE_DIRS:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../../include
+gmp_STATIC_LDFLAGS:INTERNAL=-L/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib;-lgmp
+gmp_STATIC_LDFLAGS_OTHER:INTERNAL=
+gmp_STATIC_LIBDIR:INTERNAL=
+gmp_STATIC_LIBRARIES:INTERNAL=gmp
+gmp_STATIC_LIBRARY_DIRS:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib
+gmp_STATIC_LIBS:INTERNAL=
+gmp_STATIC_LIBS_L:INTERNAL=
+gmp_STATIC_LIBS_OTHER:INTERNAL=
+gmp_STATIC_LIBS_PATHS:INTERNAL=
+gmp_VERSION:INTERNAL=6.2.1
+gmp_gmp_INCLUDEDIR:INTERNAL=
+gmp_gmp_LIBDIR:INTERNAL=
+gmp_gmp_PREFIX:INTERNAL=
+gmp_gmp_VERSION:INTERNAL=
+gmpxx_CFLAGS:INTERNAL=-I/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../../include
+gmpxx_CFLAGS_I:INTERNAL=
+gmpxx_CFLAGS_OTHER:INTERNAL=
+gmpxx_FOUND:INTERNAL=1
+gmpxx_INCLUDEDIR:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../../include
+gmpxx_INCLUDE_DIRS:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../../include
+gmpxx_LDFLAGS:INTERNAL=-L/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib;-lgmpxx;-lgmp
+gmpxx_LDFLAGS_OTHER:INTERNAL=
+gmpxx_LIBDIR:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib
+gmpxx_LIBRARIES:INTERNAL=gmpxx;gmp
+gmpxx_LIBRARY_DIRS:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib
+gmpxx_LIBS:INTERNAL=
+gmpxx_LIBS_L:INTERNAL=
+gmpxx_LIBS_OTHER:INTERNAL=
+gmpxx_LIBS_PATHS:INTERNAL=
+gmpxx_MODULE_NAME:INTERNAL=gmpxx
+gmpxx_PREFIX:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../..
+gmpxx_STATIC_CFLAGS:INTERNAL=-I/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../../include
+gmpxx_STATIC_CFLAGS_I:INTERNAL=
+gmpxx_STATIC_CFLAGS_OTHER:INTERNAL=
+gmpxx_STATIC_INCLUDE_DIRS:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../../include
+gmpxx_STATIC_LDFLAGS:INTERNAL=-L/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib;-lgmpxx;-lgmp
+gmpxx_STATIC_LDFLAGS_OTHER:INTERNAL=
+gmpxx_STATIC_LIBDIR:INTERNAL=
+gmpxx_STATIC_LIBRARIES:INTERNAL=gmpxx;gmp
+gmpxx_STATIC_LIBRARY_DIRS:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib
+gmpxx_STATIC_LIBS:INTERNAL=
+gmpxx_STATIC_LIBS_L:INTERNAL=
+gmpxx_STATIC_LIBS_OTHER:INTERNAL=
+gmpxx_STATIC_LIBS_PATHS:INTERNAL=
+gmpxx_VERSION:INTERNAL=6.2.1
+gmpxx_gmpxx_INCLUDEDIR:INTERNAL=
+gmpxx_gmpxx_LIBDIR:INTERNAL=
+gmpxx_gmpxx_PREFIX:INTERNAL=
+gmpxx_gmpxx_VERSION:INTERNAL=
+//ADVANCED property for variable: pkgcfg_lib_gmp_gmp
+pkgcfg_lib_gmp_gmp-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_gmpxx_gmp
+pkgcfg_lib_gmpxx_gmp-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_gmpxx_gmpxx
+pkgcfg_lib_gmpxx_gmpxx-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/Users/full-hat/Documents/MyProjects/FHCrypto/build/vcpkg_installed/arm64-osx/debug/lib/pkgconfig/../../lib
 

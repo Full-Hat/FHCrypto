@@ -5,7 +5,6 @@
 #include <array>
 #include <cstddef>
 
-const size_t buff_size = 128 * 8;
 const size_t block_size = 16;
 const size_t key_size = 32;
 
