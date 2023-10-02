@@ -30,7 +30,7 @@ public:
     mpz_class Rand(size_t value_size)
     {
         mpz_class rand_value;
-        mpz_urandomb(rand_value.get_mpz_t(), m_state, value_size * 8);
+        mpz_urandomb(rand_value.get_mpz_t(), m_state, (mp_bitcnt_t)value_size * 8);
         return rand_value;
     }
 

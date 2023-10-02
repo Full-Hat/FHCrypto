@@ -1,4 +1,0 @@
-test_STB.exe 5 0.0162396
-test_utils.exe 2 0.073096
-test_GOST_28147_89.exe 3 0.0279102
----

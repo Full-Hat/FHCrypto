@@ -1,0 +1,60 @@
+Package: vcpkg-cmake
+Version: 2023-05-04
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 27cab228c2d78cb4f9d4978ae7d89f13e71de4d1af0e8eeabf77af62dbeac0bf
+Status: install ok installed
+
+Package: vcpkg-cmake-get-vars
+Version: 2023-03-02
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 1cda816feb59698797acfcfd27cd615a5f82e55b7e500d42b832f1ba4d123606
+Status: install ok installed
+
+Package: gmp
+Version: 6.2.1
+Port-Version: 21
+Depends: vcpkg-cmake-get-vars
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2fd10b10be6ba38be7eda3af46178dd98d99d7ad4d41517354b5d6a9f740a2d7
+Description: The GNU Multiple Precision Arithmetic Library
+Status: install ok installed
+
+Package: vcpkg-cmake-config
+Version: 2022-02-06
+Port-Version: 1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 6bee54edc6ba27b3f8e54c23e6e02eda10e63868f4f8bc6c34212acaa540159b
+Status: install ok installed
+
+Package: gtest
+Version: 1.14.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fbbee6c80e84fe4ba22041d045a61b1f29f4a237c1db04633a5bd9bf18a944e5
+Description: GoogleTest and GoogleMock testing frameworks
+Status: install ok installed
+
+Package: vcpkg-tool-meson
+Version: 0.63
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c76a9697c5e676055bed5b9b8ec0f66fe84eef7b682366ebc60b6f6a5c0b3063
+Description: Meson build system
+Status: install ok installed
+
+Package: pkgconf
+Version: 1.8.0
+Port-Version: 5
+Depends: vcpkg-tool-meson
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 24b9fb81dd0b9f73131c2e86235bbdfb7ea7efcde115f8208e9ac4cdedf88e43
+Description: pkgconf is a program which helps to configure compiler and linker flags for development libraries. It is similar to pkg-config from freedesktop.org.
+Status: install ok installed
+
