@@ -1,0 +1,9 @@
+Package: gmp
+Version: 6.2.1
+Port-Version: 21
+Depends: vcpkg-cmake-get-vars
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 26d9e581d690497b309f782ad97262d32b81b9aa4085efcb0a80980a5d2ddc47
+Description: The GNU Multiple Precision Arithmetic Library
+Status: install ok half-installed

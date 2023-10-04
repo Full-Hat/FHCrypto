@@ -1,6 +1,10 @@
 #pragma once
 
 #include "big_rand.h"
+#include <_types/_uint32_t.h>
+#include <_types/_uint8_t.h>
+#include <cstddef>
+#include <vector>
 
 inline bool IsPrime(mpz_class value)
 {
@@ -63,6 +67,57 @@ mpz_class to_mpz_class(std::vector<unsigned int> value)
     }
 
     result >>= 32;
+
+    return result;
+}
+
+inline std::vector<uint32_t> to_vec_32(std::vector<uint8_t> data)
+{
+    std::vector<uint32_t> result;
+    
+    for (int i = 0; i < data.size(); i += 4)
+    {
+        uint32_t value = 0;
+        for (int k = i + 3; k >= i; --k)
+        {
+            if (k >= data.size())
+            {
+                continue;
+            }
+
+            value += data[k];
+
+            if (k != i)
+            {
+                value <<= 8;
+            }
+        }
+
+        result.push_back(value);
+    }
+
+    return result;
+}
+
+inline std::vector<uint8_t> to_vec_8(std::vector<uint32_t> data, size_t real_size)
+{
+    std::vector<uint8_t> result;
+    unsigned int counter = 0;
+    for (auto el : data)
+    {
+        for (int i = 0; i < 4; ++i)
+        {
+            result.push_back((uint8_t)el);
+            el >>= 8;
+            
+            ++counter;
+
+            if (counter == real_size)
+            {
+                return result;
+            }
+        }
+    }
 
     return result;
 }

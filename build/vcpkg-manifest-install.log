@@ -1,0 +1,86 @@
+Detecting compiler hash for triplet arm64-osx...
+The following packages will be built and installed:
+    gmp:arm64-osx -> 6.2.1#21
+    gtest:arm64-osx -> 1.14.0
+    pkgconf:arm64-osx -> 1.8.0#5
+  * vcpkg-cmake:arm64-osx -> 2023-05-04
+  * vcpkg-cmake-config:arm64-osx -> 2022-02-06#1
+  * vcpkg-cmake-get-vars:arm64-osx -> 2023-03-02
+  * vcpkg-tool-meson:arm64-osx -> 0.63
+Additional packages (*) will be modified to complete this operation.
+Restored 6 package(s) from /Users/full-hat/.cache/vcpkg/archives in 186 ms. Use --debug to see more details.
+Installing 1/7 vcpkg-cmake:arm64-osx...
+Elapsed time to handle vcpkg-cmake:arm64-osx: 2.6 ms
+Installing 2/7 vcpkg-cmake-get-vars:arm64-osx...
+Elapsed time to handle vcpkg-cmake-get-vars:arm64-osx: 2.56 ms
+Installing 3/7 gmp:arm64-osx...
+Building gmp:arm64-osx...
+warning: -- Using community triplet arm64-osx. This triplet configuration is not guaranteed to succeed.
+-- [COMMUNITY] Loading triplet configuration from: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/triplets/community/arm64-osx.cmake
+-- Using cached gmp-6.2.1.tar.xz.
+-- Cleaning sources at /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/buildtrees/gmp/src/v6.2.1-0c723d4b6f.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/downloads/gmp-6.2.1.tar.xz
+-- Applying patch asmflags.patch
+-- Applying patch cross-tools.patch
+-- Applying patch subdirs.patch
+-- Applying patch msvc_symbol.patch
+-- Applying patch arm64-coff.patch
+-- Applying patch gmp-arm64-asm-fix-5f32dbc41afc.patch
+-- Using source at /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/buildtrees/gmp/src/v6.2.1-0c723d4b6f.clean
+-- Getting CMake variables for arm64-osx
+-- Getting CMake variables for arm64-osx-dbg
+-- Getting CMake variables for arm64-osx-rel
+-- Generating configure for arm64-osx
+-- Finished generating configure for arm64-osx
+-- Configuring arm64-osx-dbg
+-- Configuring arm64-osx-rel
+-- Building arm64-osx-dbg
+-- Installing arm64-osx-dbg
+-- Building arm64-osx-rel
+-- Installing arm64-osx-rel
+-- Fixing pkgconfig file: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/lib/pkgconfig/gmp.pc
+-- Fixing pkgconfig file: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/lib/pkgconfig/gmpxx.pc
+-- Fixing pkgconfig file: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/debug/lib/pkgconfig/gmp.pc
+-- Fixing pkgconfig file: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/debug/lib/pkgconfig/gmpxx.pc
+-- Installing: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/manual-tools/gmp/gen-bases
+-- Installing: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/manual-tools/gmp/gen-fac
+-- Installing: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/manual-tools/gmp/gen-fib
+-- Installing: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/manual-tools/gmp/gen-jacobitab
+-- Installing: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/manual-tools/gmp/gen-psqr
+-- Installing: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/manual-tools/gmp/gen-trialdivtab
+-- Installing: /Users/full-hat/Documents/MyProjects/FHCrypto/vcpkg/packages/gmp_arm64-osx/share/gmp/usage
+-- Performing post-build validation
+Failed to store binary cache /Users/full-hat/.cache/vcpkg/archives/26/26d9e581d690497b309f782ad97262d32b81b9aa4085efcb0a80980a5d2ddc47.zip
+Permission denied
+Stored binaries in 0 destinations in 307 ms.
+Elapsed time to handle gmp:arm64-osx: 1.4 min
+Installing 4/7 vcpkg-cmake-config:arm64-osx...
+Elapsed time to handle vcpkg-cmake-config:arm64-osx: 2.51 ms
+Installing 5/7 gtest:arm64-osx...
+Elapsed time to handle gtest:arm64-osx: 25.2 ms
+Installing 6/7 vcpkg-tool-meson:arm64-osx...
+Elapsed time to handle vcpkg-tool-meson:arm64-osx: 214 ms
+Installing 7/7 pkgconf:arm64-osx...
+Elapsed time to handle pkgconf:arm64-osx: 5.86 ms
+Total install time: 1.4 min
+The package gmp can be imported via CMake FindPkgConfig module:
+
+    #  gmp
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(gmp REQUIRED IMPORTED_TARGET gmp)
+    target_link_libraries(main PkgConfig::gmp)
+
+    # gmpxx
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(gmpxx REQUIRED IMPORTED_TARGET gmpxx)
+    target_link_libraries(main PkgConfig::gmpxx)
+
+The package gtest is compatible with built-in CMake targets:
+
+    enable_testing()
+    
+    find_package(GTest CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
+    
+    add_test(AllTestsInMain main)
+

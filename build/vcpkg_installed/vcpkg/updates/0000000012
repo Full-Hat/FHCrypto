@@ -1,0 +1,9 @@
+Package: pkgconf
+Version: 1.8.0
+Port-Version: 5
+Depends: vcpkg-tool-meson
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: a6f065bf1886fc6f5f2ce1c94b35bb1df57fb5c02bd79a9bab22166e977cf54d
+Description: pkgconf is a program which helps to configure compiler and linker flags for development libraries. It is similar to pkg-config from freedesktop.org.
+Status: install ok half-installed

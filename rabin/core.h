@@ -1,9 +1,13 @@
 #include "gmpxx.h"
+#include <cmath>
 #include <cstddef>
 #include <gmp.h>
 #include <iostream>
 #include <array>
 #include <sstream>
+#include <span>
+#include <utility>
+#include <vector>
 
 #include "big_rand.h"
 #include "utils.h"
@@ -48,14 +52,21 @@ public:
         m_n = p * q;
     }
 
-    mpz_class encrypt(std::vector<unsigned int> value)
+    std::vector<unsigned int> encrypt(std::vector<unsigned int> value, size_t real_size)
     {
-        if (value.size() + 1 > 32)
+        if (value.size() + 2 > 32)
         {
             throw std::invalid_argument("value must have size <= 128 bytes, it's algorithm requirements, real size is [" + value.size() * sizeof(value[0]) + std::string("]"));
         }
 
-        value.push_back(calculate_check_sum(value));
+        value.resize(32);
+        
+        /* Message strcture
+        REAL_DATA[real_size], TRASH[32 - real_size - 2], REAL_SIZE, CHECK_SUM
+        */
+        *value.rbegin() = calculate_check_sum(value);
+        *(++value.rbegin()) = real_size;
+
 
         mpz_class value_mpz = to_mpz_class(value);
 
@@ -63,18 +74,17 @@ public:
         mpz_class crypted;
         mpz_mod(crypted.get_mpz_t(), multiplied.get_mpz_t(), m_n.get_mpz_t());
 
-        return crypted;
-        //return to_vec(crypted, 32);
+        return to_vec(crypted, 32);
     }
 
-    std::vector<unsigned int> decrypt(mpz_class a/*std::vector<unsigned int> value*/)
+    std::pair<std::vector<unsigned int>, size_t> decrypt(std::vector<unsigned int> value)
     {
-        /*if (value.size() > 32)
+        if (value.size() > 32)
         {
             throw std::invalid_argument("value must have size <= 128 bytes, it's algorithm requirements, real size is [" + value.size() * sizeof(value[0]) + std::string("], check if you get correct message"));
-        }*/
+        }
 
-        mpz_class c = a;// to_mpz_class(value);
+        mpz_class c = to_mpz_class(value);
 
         mpz_class exp1; // (p + 1) / 4
         mpz_add_ui(exp1.get_mpz_t(), m_p.get_mpz_t(), 1);
@@ -99,13 +109,22 @@ public:
 
         for (auto el : r)
         {
-            auto data = to_vec(el, 31/*value.size()*/);
-            std::span<unsigned int> data_span{ data.begin(), --data.end() };
+            auto data = to_vec(el, 32);
 
-            if (*data.rbegin() == calculate_check_sum(data_span))
+            auto check_sum = *data.rbegin();
+            auto real_size = *(++data.rbegin());
+            
+            if (real_size >= 32 * 4)
             {
-                data.pop_back();
-                return data;
+                continue;
+            }
+
+            std::span<unsigned int> data_span{ data.begin(), data.begin() + std::ceil((double)real_size / 4) };
+
+            if (check_sum == calculate_check_sum(data_span))
+            {
+                data.resize(std::ceil((double)real_size / 4));
+                return { data, real_size };
             }
         }
 
