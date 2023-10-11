@@ -1,0 +1,10 @@
+test_GOST_28147_89.exe 4 0.0974395
+test_utils.exe 2 0.212558
+test_STB.exe 2 0.0964979
+Test11.exe 7 0.00828147
+Test12.exe 3 0.00675555
+Test13.exe 2 0.1306
+Test14.exe 4 0.795973
+Test15.exe 4 0.826538
+Test16.exe 1 0.0797037
+---

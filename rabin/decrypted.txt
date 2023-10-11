@@ -22,7 +22,7 @@ errorh
 errorphgo=rwe
 o=go=writingow
 oeg
-o=whileo=golweo
+o=whileo=golweoit
 [=lgo
 woelgolfwe[lf[ol[lowef[lowl[oefl
 ]ObWl]Is_EOFlowel

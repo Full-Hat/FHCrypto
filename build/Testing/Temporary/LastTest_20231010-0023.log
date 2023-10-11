@@ -1,0 +1,30 @@
+Start testing: Oct 09 17:59 PDT
+----------------------------------------------------------
+8/8 Testing: Test15.exe
+8/8 Test: Test15.exe
+Command: "/Users/full-hat/Documents/MyProjects/FHCrypto/build/Test15_test"
+Directory: /Users/full-hat/Documents/MyProjects/FHCrypto/build
+"Test15.exe" start time: Oct 09 17:59 PDT
+Output:
+----------------------------------------------------------
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Lab1
+[ RUN      ] Lab1.Task5_positive
+libc++abi: terminating due to uncaught exception of type std::invalid_argument: Bad extension
+libc++abi: terminating due to uncaught exception of type std::__1::__fs::filesystem::filesystem_error: filesystem error: in recursive_directory_iterator: No such file or directory ["skclj"]
+[       OK ] Lab1.Task5_positive (38 ms)
+[----------] 1 test from Lab1 (38 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (38 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"Test15.exe" end time: Oct 09 17:59 PDT
+"Test15.exe" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 09 17:59 PDT

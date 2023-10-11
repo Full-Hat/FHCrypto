@@ -204,6 +204,136 @@ rabin/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rabin.dir/build.make CMakeFiles/rabin.dir/build
 .PHONY : rabin/fast
 
+#=============================================================================
+# Target rules for targets named Test11
+
+# Build rule for target.
+Test11: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test11
+.PHONY : Test11
+
+# fast build rule for target.
+Test11/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test11.dir/build.make CMakeFiles/Test11.dir/build
+.PHONY : Test11/fast
+
+#=============================================================================
+# Target rules for targets named Test11_test
+
+# Build rule for target.
+Test11_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test11_test
+.PHONY : Test11_test
+
+# fast build rule for target.
+Test11_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test11_test.dir/build.make CMakeFiles/Test11_test.dir/build
+.PHONY : Test11_test/fast
+
+#=============================================================================
+# Target rules for targets named Test12
+
+# Build rule for target.
+Test12: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test12
+.PHONY : Test12
+
+# fast build rule for target.
+Test12/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test12.dir/build.make CMakeFiles/Test12.dir/build
+.PHONY : Test12/fast
+
+#=============================================================================
+# Target rules for targets named Test12_test
+
+# Build rule for target.
+Test12_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test12_test
+.PHONY : Test12_test
+
+# fast build rule for target.
+Test12_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test12_test.dir/build.make CMakeFiles/Test12_test.dir/build
+.PHONY : Test12_test/fast
+
+#=============================================================================
+# Target rules for targets named Test13
+
+# Build rule for target.
+Test13: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test13
+.PHONY : Test13
+
+# fast build rule for target.
+Test13/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test13.dir/build.make CMakeFiles/Test13.dir/build
+.PHONY : Test13/fast
+
+#=============================================================================
+# Target rules for targets named Test13_test
+
+# Build rule for target.
+Test13_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test13_test
+.PHONY : Test13_test
+
+# fast build rule for target.
+Test13_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test13_test.dir/build.make CMakeFiles/Test13_test.dir/build
+.PHONY : Test13_test/fast
+
+#=============================================================================
+# Target rules for targets named Test14
+
+# Build rule for target.
+Test14: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test14
+.PHONY : Test14
+
+# fast build rule for target.
+Test14/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test14.dir/build.make CMakeFiles/Test14.dir/build
+.PHONY : Test14/fast
+
+#=============================================================================
+# Target rules for targets named Test14_test
+
+# Build rule for target.
+Test14_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test14_test
+.PHONY : Test14_test
+
+# fast build rule for target.
+Test14_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test14_test.dir/build.make CMakeFiles/Test14_test.dir/build
+.PHONY : Test14_test/fast
+
+#=============================================================================
+# Target rules for targets named Test15
+
+# Build rule for target.
+Test15: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test15
+.PHONY : Test15
+
+# fast build rule for target.
+Test15/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test15.dir/build.make CMakeFiles/Test15.dir/build
+.PHONY : Test15/fast
+
+#=============================================================================
+# Target rules for targets named Test15_test
+
+# Build rule for target.
+Test15_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test15_test
+.PHONY : Test15_test
+
+# fast build rule for target.
+Test15_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test15_test.dir/build.make CMakeFiles/Test15_test.dir/build
+.PHONY : Test15_test/fast
+
 28147-89-CFB-mode/main.o: 28147-89-CFB-mode/main.cpp.o
 .PHONY : 28147-89-CFB-mode/main.o
 
@@ -251,6 +381,246 @@ rabin/fast:
 28147-89-CFB-mode/test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_GOST_28147_89.dir/build.make CMakeFiles/test_GOST_28147_89.dir/28147-89-CFB-mode/test.cpp.s
 .PHONY : 28147-89-CFB-mode/test.cpp.s
+
+Lab1/Test1/main.o: Lab1/Test1/main.cpp.o
+.PHONY : Lab1/Test1/main.o
+
+# target to build an object file
+Lab1/Test1/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test11.dir/build.make CMakeFiles/Test11.dir/Lab1/Test1/main.cpp.o
+.PHONY : Lab1/Test1/main.cpp.o
+
+Lab1/Test1/main.i: Lab1/Test1/main.cpp.i
+.PHONY : Lab1/Test1/main.i
+
+# target to preprocess a source file
+Lab1/Test1/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test11.dir/build.make CMakeFiles/Test11.dir/Lab1/Test1/main.cpp.i
+.PHONY : Lab1/Test1/main.cpp.i
+
+Lab1/Test1/main.s: Lab1/Test1/main.cpp.s
+.PHONY : Lab1/Test1/main.s
+
+# target to generate assembly for a file
+Lab1/Test1/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test11.dir/build.make CMakeFiles/Test11.dir/Lab1/Test1/main.cpp.s
+.PHONY : Lab1/Test1/main.cpp.s
+
+Lab1/Test1/test.o: Lab1/Test1/test.cpp.o
+.PHONY : Lab1/Test1/test.o
+
+# target to build an object file
+Lab1/Test1/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test11_test.dir/build.make CMakeFiles/Test11_test.dir/Lab1/Test1/test.cpp.o
+.PHONY : Lab1/Test1/test.cpp.o
+
+Lab1/Test1/test.i: Lab1/Test1/test.cpp.i
+.PHONY : Lab1/Test1/test.i
+
+# target to preprocess a source file
+Lab1/Test1/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test11_test.dir/build.make CMakeFiles/Test11_test.dir/Lab1/Test1/test.cpp.i
+.PHONY : Lab1/Test1/test.cpp.i
+
+Lab1/Test1/test.s: Lab1/Test1/test.cpp.s
+.PHONY : Lab1/Test1/test.s
+
+# target to generate assembly for a file
+Lab1/Test1/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test11_test.dir/build.make CMakeFiles/Test11_test.dir/Lab1/Test1/test.cpp.s
+.PHONY : Lab1/Test1/test.cpp.s
+
+Lab1/Test2/main.o: Lab1/Test2/main.cpp.o
+.PHONY : Lab1/Test2/main.o
+
+# target to build an object file
+Lab1/Test2/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test12.dir/build.make CMakeFiles/Test12.dir/Lab1/Test2/main.cpp.o
+.PHONY : Lab1/Test2/main.cpp.o
+
+Lab1/Test2/main.i: Lab1/Test2/main.cpp.i
+.PHONY : Lab1/Test2/main.i
+
+# target to preprocess a source file
+Lab1/Test2/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test12.dir/build.make CMakeFiles/Test12.dir/Lab1/Test2/main.cpp.i
+.PHONY : Lab1/Test2/main.cpp.i
+
+Lab1/Test2/main.s: Lab1/Test2/main.cpp.s
+.PHONY : Lab1/Test2/main.s
+
+# target to generate assembly for a file
+Lab1/Test2/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test12.dir/build.make CMakeFiles/Test12.dir/Lab1/Test2/main.cpp.s
+.PHONY : Lab1/Test2/main.cpp.s
+
+Lab1/Test2/test.o: Lab1/Test2/test.cpp.o
+.PHONY : Lab1/Test2/test.o
+
+# target to build an object file
+Lab1/Test2/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test12_test.dir/build.make CMakeFiles/Test12_test.dir/Lab1/Test2/test.cpp.o
+.PHONY : Lab1/Test2/test.cpp.o
+
+Lab1/Test2/test.i: Lab1/Test2/test.cpp.i
+.PHONY : Lab1/Test2/test.i
+
+# target to preprocess a source file
+Lab1/Test2/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test12_test.dir/build.make CMakeFiles/Test12_test.dir/Lab1/Test2/test.cpp.i
+.PHONY : Lab1/Test2/test.cpp.i
+
+Lab1/Test2/test.s: Lab1/Test2/test.cpp.s
+.PHONY : Lab1/Test2/test.s
+
+# target to generate assembly for a file
+Lab1/Test2/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test12_test.dir/build.make CMakeFiles/Test12_test.dir/Lab1/Test2/test.cpp.s
+.PHONY : Lab1/Test2/test.cpp.s
+
+Lab1/Test3/main.o: Lab1/Test3/main.cpp.o
+.PHONY : Lab1/Test3/main.o
+
+# target to build an object file
+Lab1/Test3/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test13.dir/build.make CMakeFiles/Test13.dir/Lab1/Test3/main.cpp.o
+.PHONY : Lab1/Test3/main.cpp.o
+
+Lab1/Test3/main.i: Lab1/Test3/main.cpp.i
+.PHONY : Lab1/Test3/main.i
+
+# target to preprocess a source file
+Lab1/Test3/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test13.dir/build.make CMakeFiles/Test13.dir/Lab1/Test3/main.cpp.i
+.PHONY : Lab1/Test3/main.cpp.i
+
+Lab1/Test3/main.s: Lab1/Test3/main.cpp.s
+.PHONY : Lab1/Test3/main.s
+
+# target to generate assembly for a file
+Lab1/Test3/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test13.dir/build.make CMakeFiles/Test13.dir/Lab1/Test3/main.cpp.s
+.PHONY : Lab1/Test3/main.cpp.s
+
+Lab1/Test3/test.o: Lab1/Test3/test.cpp.o
+.PHONY : Lab1/Test3/test.o
+
+# target to build an object file
+Lab1/Test3/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test13_test.dir/build.make CMakeFiles/Test13_test.dir/Lab1/Test3/test.cpp.o
+.PHONY : Lab1/Test3/test.cpp.o
+
+Lab1/Test3/test.i: Lab1/Test3/test.cpp.i
+.PHONY : Lab1/Test3/test.i
+
+# target to preprocess a source file
+Lab1/Test3/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test13_test.dir/build.make CMakeFiles/Test13_test.dir/Lab1/Test3/test.cpp.i
+.PHONY : Lab1/Test3/test.cpp.i
+
+Lab1/Test3/test.s: Lab1/Test3/test.cpp.s
+.PHONY : Lab1/Test3/test.s
+
+# target to generate assembly for a file
+Lab1/Test3/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test13_test.dir/build.make CMakeFiles/Test13_test.dir/Lab1/Test3/test.cpp.s
+.PHONY : Lab1/Test3/test.cpp.s
+
+Lab1/Test4/main.o: Lab1/Test4/main.cpp.o
+.PHONY : Lab1/Test4/main.o
+
+# target to build an object file
+Lab1/Test4/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test14.dir/build.make CMakeFiles/Test14.dir/Lab1/Test4/main.cpp.o
+.PHONY : Lab1/Test4/main.cpp.o
+
+Lab1/Test4/main.i: Lab1/Test4/main.cpp.i
+.PHONY : Lab1/Test4/main.i
+
+# target to preprocess a source file
+Lab1/Test4/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test14.dir/build.make CMakeFiles/Test14.dir/Lab1/Test4/main.cpp.i
+.PHONY : Lab1/Test4/main.cpp.i
+
+Lab1/Test4/main.s: Lab1/Test4/main.cpp.s
+.PHONY : Lab1/Test4/main.s
+
+# target to generate assembly for a file
+Lab1/Test4/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test14.dir/build.make CMakeFiles/Test14.dir/Lab1/Test4/main.cpp.s
+.PHONY : Lab1/Test4/main.cpp.s
+
+Lab1/Test4/test.o: Lab1/Test4/test.cpp.o
+.PHONY : Lab1/Test4/test.o
+
+# target to build an object file
+Lab1/Test4/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test14_test.dir/build.make CMakeFiles/Test14_test.dir/Lab1/Test4/test.cpp.o
+.PHONY : Lab1/Test4/test.cpp.o
+
+Lab1/Test4/test.i: Lab1/Test4/test.cpp.i
+.PHONY : Lab1/Test4/test.i
+
+# target to preprocess a source file
+Lab1/Test4/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test14_test.dir/build.make CMakeFiles/Test14_test.dir/Lab1/Test4/test.cpp.i
+.PHONY : Lab1/Test4/test.cpp.i
+
+Lab1/Test4/test.s: Lab1/Test4/test.cpp.s
+.PHONY : Lab1/Test4/test.s
+
+# target to generate assembly for a file
+Lab1/Test4/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test14_test.dir/build.make CMakeFiles/Test14_test.dir/Lab1/Test4/test.cpp.s
+.PHONY : Lab1/Test4/test.cpp.s
+
+Lab1/Test5/main.o: Lab1/Test5/main.cpp.o
+.PHONY : Lab1/Test5/main.o
+
+# target to build an object file
+Lab1/Test5/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test15.dir/build.make CMakeFiles/Test15.dir/Lab1/Test5/main.cpp.o
+.PHONY : Lab1/Test5/main.cpp.o
+
+Lab1/Test5/main.i: Lab1/Test5/main.cpp.i
+.PHONY : Lab1/Test5/main.i
+
+# target to preprocess a source file
+Lab1/Test5/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test15.dir/build.make CMakeFiles/Test15.dir/Lab1/Test5/main.cpp.i
+.PHONY : Lab1/Test5/main.cpp.i
+
+Lab1/Test5/main.s: Lab1/Test5/main.cpp.s
+.PHONY : Lab1/Test5/main.s
+
+# target to generate assembly for a file
+Lab1/Test5/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test15.dir/build.make CMakeFiles/Test15.dir/Lab1/Test5/main.cpp.s
+.PHONY : Lab1/Test5/main.cpp.s
+
+Lab1/Test5/test.o: Lab1/Test5/test.cpp.o
+.PHONY : Lab1/Test5/test.o
+
+# target to build an object file
+Lab1/Test5/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test15_test.dir/build.make CMakeFiles/Test15_test.dir/Lab1/Test5/test.cpp.o
+.PHONY : Lab1/Test5/test.cpp.o
+
+Lab1/Test5/test.i: Lab1/Test5/test.cpp.i
+.PHONY : Lab1/Test5/test.i
+
+# target to preprocess a source file
+Lab1/Test5/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test15_test.dir/build.make CMakeFiles/Test15_test.dir/Lab1/Test5/test.cpp.i
+.PHONY : Lab1/Test5/test.cpp.i
+
+Lab1/Test5/test.s: Lab1/Test5/test.cpp.s
+.PHONY : Lab1/Test5/test.s
+
+# target to generate assembly for a file
+Lab1/Test5/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test15_test.dir/build.make CMakeFiles/Test15_test.dir/Lab1/Test5/test.cpp.s
+.PHONY : Lab1/Test5/test.cpp.s
 
 STB-34-101-31/main.o: STB-34-101-31/main.cpp.o
 .PHONY : STB-34-101-31/main.o
@@ -359,6 +729,16 @@ help:
 	@echo "... test"
 	@echo "... GOST_28147_89"
 	@echo "... STB"
+	@echo "... Test11"
+	@echo "... Test11_test"
+	@echo "... Test12"
+	@echo "... Test12_test"
+	@echo "... Test13"
+	@echo "... Test13_test"
+	@echo "... Test14"
+	@echo "... Test14_test"
+	@echo "... Test15"
+	@echo "... Test15_test"
 	@echo "... rabin"
 	@echo "... test_GOST_28147_89"
 	@echo "... test_STB"
@@ -369,6 +749,36 @@ help:
 	@echo "... 28147-89-CFB-mode/test.o"
 	@echo "... 28147-89-CFB-mode/test.i"
 	@echo "... 28147-89-CFB-mode/test.s"
+	@echo "... Lab1/Test1/main.o"
+	@echo "... Lab1/Test1/main.i"
+	@echo "... Lab1/Test1/main.s"
+	@echo "... Lab1/Test1/test.o"
+	@echo "... Lab1/Test1/test.i"
+	@echo "... Lab1/Test1/test.s"
+	@echo "... Lab1/Test2/main.o"
+	@echo "... Lab1/Test2/main.i"
+	@echo "... Lab1/Test2/main.s"
+	@echo "... Lab1/Test2/test.o"
+	@echo "... Lab1/Test2/test.i"
+	@echo "... Lab1/Test2/test.s"
+	@echo "... Lab1/Test3/main.o"
+	@echo "... Lab1/Test3/main.i"
+	@echo "... Lab1/Test3/main.s"
+	@echo "... Lab1/Test3/test.o"
+	@echo "... Lab1/Test3/test.i"
+	@echo "... Lab1/Test3/test.s"
+	@echo "... Lab1/Test4/main.o"
+	@echo "... Lab1/Test4/main.i"
+	@echo "... Lab1/Test4/main.s"
+	@echo "... Lab1/Test4/test.o"
+	@echo "... Lab1/Test4/test.i"
+	@echo "... Lab1/Test4/test.s"
+	@echo "... Lab1/Test5/main.o"
+	@echo "... Lab1/Test5/main.i"
+	@echo "... Lab1/Test5/main.s"
+	@echo "... Lab1/Test5/test.o"
+	@echo "... Lab1/Test5/test.i"
+	@echo "... Lab1/Test5/test.s"
 	@echo "... STB-34-101-31/main.o"
 	@echo "... STB-34-101-31/main.i"
 	@echo "... STB-34-101-31/main.s"

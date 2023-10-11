@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20231010-0023-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.27.4"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="macOS"
+	Hostname="Full-Hats-MacBook-Pro.local"
+	OSRelease="13.5"
+	OSVersion="22G74"
+	OSPlatform="arm64"
+	Is64Bits="1"
+	VendorString="IBM"
+	VendorID="IBM"
+	FamilyID="16777228"
+	ModelID="2"
+	ProcessorCacheSize="131072"
+	NumberOfLogicalCPU="10"
+	NumberOfPhysicalCPU="10"
+	TotalVirtualMemory="3072"
+	TotalPhysicalMemory="16384"
+	LogicalProcessorsPerPhysical="10"
+	ProcessorClockFrequency="0"
+	>
+	<Testing>
+		<StartDateTime>Oct 09 17:59 PDT</StartDateTime>
+		<StartTestTime>1696899567</StartTestTime>
+		<TestList>
+			<Test>./Test15.exe</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>Test15.exe</Name>
+			<Path>.</Path>
+			<FullName>./Test15.exe</FullName>
+			<FullCommandLine>/Users/full-hat/Documents/MyProjects/FHCrypto/build/Test15_test</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0525935</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/Users/full-hat/Documents/MyProjects/FHCrypto/build/Test15_test</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJylUk1Lw0AQvedXDJ4spYEiggQ8KIoHpUqrpxCWTTJpx252w+xstf/eTVtrKSqC77AMs2++3kx+uUcB02At2TmMQdALNOzaT9sHEkyTfLRHAXfGldps/9GuiJ1t0UYuyih0R+TDnA+6HCc5TF8msEGx8aTP2i/PVec8Ca0wMVRWw6EuKYuh3JLV0jdXBwRxEGylw3wRK79X2Ak5C64BWXcIXuosI7vShmqleR76rjK41nUkC1ofyf/MrtS4fxqfZQ0Z9Gsv2B7aCpkdZ/DlgZ2HLDBWgX2cUdUUbXG8VlFe1tITJi6qXS02oeAY9hzIT/yyMq8nRRRvi8f778WD07MLaP3g9x3sWHFg0WaQ/G27gppHtXuzSX54Oz/dDLC26VGh2P3T1Wx2e9OvfktOkw/2pdWA====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Oct 09 17:59 PDT</EndDateTime>
+		<EndTestTime>1696899567</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

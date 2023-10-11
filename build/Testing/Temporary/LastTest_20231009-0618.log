@@ -1,0 +1,21 @@
+Start testing: Oct 09 16:50 PDT
+----------------------------------------------------------
+8/8 Testing: Test15.exe
+8/8 Test: Test15.exe
+Command: "/Users/full-hat/Documents/MyProjects/FHCrypto/build/Test15_test"
+Directory: /Users/full-hat/Documents/MyProjects/FHCrypto/build
+"Test15.exe" start time: Oct 09 16:50 PDT
+Output:
+----------------------------------------------------------
+[==========] Running 0 tests from 0 test suites.
+[==========] 0 tests from 0 test suites ran. (0 ms total)
+[  PASSED  ] 0 tests.
+<end of output>
+Test time =   3.07 sec
+----------------------------------------------------------
+Test Passed.
+"Test15.exe" end time: Oct 09 16:50 PDT
+"Test15.exe" time elapsed: 00:00:03
+----------------------------------------------------------
+
+End testing: Oct 09 16:50 PDT
