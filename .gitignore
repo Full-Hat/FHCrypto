@@ -3,3 +3,4 @@
 out
 .cache
 build
+**.DS_Store
