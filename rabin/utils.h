@@ -1,8 +1,6 @@
 #pragma once
 
 #include "big_rand.h"
-#include <_types/_uint32_t.h>
-#include <_types/_uint8_t.h>
 #include <cstddef>
 #include <vector>
 

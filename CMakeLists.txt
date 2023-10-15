@@ -38,35 +38,10 @@ add_executable(rabin rabin/main.cpp)
 target_link_libraries(rabin PkgConfig::gmp)
 target_link_libraries(rabin PkgConfig::gmpxx)
 
-# Test
-add_executable(Test11 Lab1/Test1/main.cpp)
-add_executable(Test11_test Lab1/Test1/test.cpp)
-target_link_libraries(Test11_test PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
-add_test(Test11.exe Test11_test)
+# GOST 34 11
+add_executable(GOST_31_11 31-11/main.cpp)
 
-add_executable(Test12 Lab1/Test2/main.cpp)
-add_executable(Test12_test Lab1/Test2/test.cpp)
-target_link_libraries(Test12_test PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
-add_test(Test12.exe Test12_test)
-
-add_executable(Test13 Lab1/Test3/main.cpp)
-add_executable(Test13_test Lab1/Test3/test.cpp)
-target_link_libraries(Test13_test PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
-add_test(Test13.exe Test13_test)
-
-add_executable(Test14 Lab1/Test4/main.cpp)
-add_executable(Test14_test Lab1/Test4/test.cpp)
-target_link_libraries(Test14_test PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
-add_test(Test14.exe Test14_test)
-
-add_executable(Test15 Lab1/Test5/main.cpp)
-add_executable(Test15_test Lab1/Test5/test.cpp)
-target_link_libraries(Test15_test PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
-add_test(Test15.exe Test15_test)
-
-# add_executable(Test16 Lab1/Test6/main.cpp)
-# add_executable(Test16_test Lab1/Test6/test.cpp)
-# target_link_libraries(Test16_test PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
-# add_test(Test16.exe Test16_test)
+target_link_libraries(GOST_31_11 PkgConfig::gmp)
+target_link_libraries(GOST_31_11 PkgConfig::gmpxx)
 
 include_directories(${CMAKE_SOURCE_DIR}/utils/)
