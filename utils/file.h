@@ -1,7 +1,5 @@
 #pragma once
 
-#include <_types/_uint64_t.h>
-#include <_types/_uint8_t.h>
 #include <algorithm>
 #include <bitset>
 #include <cassert>
@@ -15,8 +13,6 @@
 #include <stdexcept>
 #include <string>
 #include <string_view>
-#include <sys/_types/_int64_t.h>
-#include <sys/types.h>
 #include <utility>
 #include <vector>
 #include <fstream>
@@ -26,10 +22,11 @@ class FileReader
 {
 public:
     using BinaryData_64 = std::pair<std::vector<uint64_t>, size_t>;
+    using BinaryData_uint = std::pair<std::vector<unsigned int>, size_t>;
     using BinaryData_8 = std::vector<uint8_t>;
     FileReader(std::string_view _fileName)
     {
-        m_file_object = std::ifstream(_fileName, std::ios::binary);
+        m_file_object = std::ifstream(_fileName.data(), std::ios::binary);
         m_file_size = std::filesystem::file_size(_fileName);
 
         InitReader(std::numeric_limits<size_t>::max());
@@ -65,13 +62,20 @@ public:
         return { block_8.first, block_8.second };
     }
 
+    BinaryData_uint ReadBlock_uint()
+    {
+        const auto block_8 = ReadBlock<unsigned int>();
+
+        return { block_8.first, block_8.second };
+    }
+
     BinaryData_8 ReadBlock_8()
     {
         const auto block_8 = ReadBlock<uint8_t>();
         return block_8.first;
     }
 
-    static ushort GetTrashBytesCount(ushort _realSizeOfBlock)
+    static unsigned short GetTrashBytesCount(unsigned short _realSizeOfBlock)
     {
         return 8 - _realSizeOfBlock;
     }
@@ -130,7 +134,7 @@ protected:
 };
 
 inline void WriteToFile(const std::vector<uint64_t>& data, const std::string_view filename, size_t real_data_size) {
-    std::ofstream file(filename, std::ios::binary);
+    std::ofstream file(filename.data(), std::ios::binary);
     if (file.is_open()) {
         if (real_data_size % 8 == 0)
         {
@@ -142,6 +146,30 @@ inline void WriteToFile(const std::vector<uint64_t>& data, const std::string_vie
 
         auto last_block_size = real_data_size - (data.size() - 1) * 8;
         if (last_block_size == 8)
+        {
+            return;
+        }
+        for (int i = 0; i < last_block_size; ++i)
+        {
+            char el = (uint8_t)(data[data.size() - 1] >> (i * 8));
+            file.write(&el, 1);
+        }
+    }
+}
+
+inline void WriteToFile(const std::vector<unsigned int>& data, const std::string_view filename, size_t real_data_size) {
+    std::ofstream file(filename.data(), std::ios::binary);
+    if (file.is_open()) {
+        if (real_data_size % 4 == 0)
+        {
+            file.write(reinterpret_cast<const char*>(data.data()), data.size() * 4);
+            return;
+        }
+
+        file.write(reinterpret_cast<const char*>(data.data()), (data.size() - 1) * 4);
+
+        auto last_block_size = real_data_size - (data.size() - 1) * 4;
+        if (last_block_size == 4)
         {
             return;
         }
@@ -184,8 +212,8 @@ bool RangeEqual(InputIterator1 begin1, InputIterator1 end1,
 
 inline bool IsEqual(std::string_view _file_name1, std::string_view _file_name2)
 {
-    std::ifstream file1(_file_name1);
-    std::ifstream file2(_file_name2);
+    std::ifstream file1(_file_name1.data());
+    std::ifstream file2(_file_name2.data());
 
     std::istreambuf_iterator<char> begin1(file1);
     std::istreambuf_iterator<char> begin2(file2);

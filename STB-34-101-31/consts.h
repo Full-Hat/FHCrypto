@@ -1,7 +1,5 @@
 #pragma once
 
-#include <_types/_uint32_t.h>
-#include <_types/_uint8_t.h>
 #include <array>
 #include <cstddef>
 
