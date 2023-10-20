@@ -41,6 +41,16 @@ target_link_libraries(rabin PkgConfig::gmpxx)
 # GOST 34 11
 add_executable(GOST_31_11 31-11/main.cpp)
 
+add_executable(test_GOST_31_11 31-11/test.cpp)
+target_link_libraries(test_GOST_31_11 PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
+add_test(test_GOST_31_11.exe test_GOST_31_11)
+
+# MD5
+add_executable(MD5 MD5/main.cpp MD5/md5.cpp)
+
+find_package(cryptopp CONFIG REQUIRED)
+target_link_libraries(MD5 PRIVATE cryptopp::cryptopp)
+
 target_link_libraries(GOST_31_11 PkgConfig::gmp)
 target_link_libraries(GOST_31_11 PkgConfig::gmpxx)
 

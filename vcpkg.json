@@ -5,6 +5,7 @@
     "dependencies": [
         "gtest",
         "gmp",
-        "pkgconf"
+        "pkgconf",
+        "cryptopp"
     ]
 }
