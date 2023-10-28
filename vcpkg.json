@@ -6,6 +6,7 @@
         "gtest",
         "gmp",
         "pkgconf",
-        "cryptopp"
+        "cryptopp",
+        "boost-multiprecision"
     ]
 }

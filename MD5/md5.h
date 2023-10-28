@@ -102,40 +102,8 @@ const unsigned int MD5_STRING_SIZE = 2 * MD5_SIZE + 1;      /* 33 */
              */
             void finish(void* signature_ = nullptr);
 
-            /*
-             * get_sig
-             *
-             * DESCRIPTION:
-             *
-             * Retrieves the previously calculated signature from the MD5 object.
-             *
-             * RETURNS:
-             *
-             * None.
-             *
-             * ARGUMENTS:
-             *
-             * signature_ - A 16 byte buffer that will contain the MD5 signature.
-             */
             void get_sig(void* signature_);
 
-            /*
-             * get_string
-             *
-             * DESCRIPTION:
-             *
-             * Retrieves the previously calculated signature from the MD5 object in
-             * printable format.
-             *
-             * RETURNS:
-             *
-             * None.
-             *
-             * ARGUMENTS:
-             *
-             * str_ - a string of characters which should be at least 33 bytes long
-             * (2 characters per MD5 byte and 1 for the \0).
-             */
             void get_string(void* str_);
 
         private:
@@ -159,48 +127,8 @@ const unsigned int MD5_STRING_SIZE = 2 * MD5_SIZE + 1;      /* 33 */
             char str[MD5_STRING_SIZE];                  /* stored plain text hash */
     };
 
-    /*
-     * sig_to_string
-     *
-     * DESCRIPTION:
-     *
-     * Convert a MD5 signature in a 16 byte buffer into a hexadecimal string
-     * representation.
-     *
-     * RETURNS:
-     *
-     * None.
-     *
-     * ARGUMENTS:
-     *
-     * signature - a 16 byte buffer that contains the MD5 signature.
-     *
-     * str - a string of characters which should be at least 33 bytes long (2
-     * characters per MD5 byte and 1 for the \0).
-     *
-     * str_len - the length of the string.
-     */
     extern void sig_to_string(const void* signature, char* str, const int str_len);
 
-    /*
-     * sig_from_string
-     *
-     * DESCRIPTION:
-     *
-     * Convert a MD5 signature from a hexadecimal string representation into
-     * a 16 byte buffer.
-     *
-     * RETURNS:
-     *
-     * None.
-     *
-     * ARGUMENTS:
-     *
-     * signature - A 16 byte buffer that will contain the MD5 signature.
-     *
-     * str - A string of charactes which _must_ be at least 32 bytes long (2
-     * characters per MD5 byte).
-     */
     extern void sig_from_string(void* signature, const char* str);
 } // namespace md5
 

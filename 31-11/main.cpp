@@ -1,13 +1,16 @@
+#include <cstddef>
 #include <fstream>
+#include <stdexcept>
 
 #include "core.h"
 
-int main() {
-  std::cout << "Hello world";
-  std::ofstream fout("/Users/full-hat/Documents/MyProjects/FHCrypto/31-11/output.txt");
-  std::ifstream fin("/Users/full-hat/Documents/MyProjects/FHCrypto/31-11/input.txt");
+int main(int argc, char *argv[]) {
+  auto mode = std::string(argv[1]) == "512" ? Hash::Mode::MODE_512 : Hash::Mode::MODE_256;
+  
+  std::ifstream fin(argv[2]);
+  std::ofstream fout(argv[3]);
   if (!fout.is_open() || !fin.is_open()) {
     throw std::runtime_error("Can't open files");
   }
-  Hash::GetHash(fin, fout, Hash::Mode::MODE_512);
+  Hash::GetHash(fin, fout, mode);
 }

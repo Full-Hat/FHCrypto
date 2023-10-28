@@ -56,7 +56,7 @@ public:
     {
         if (value.size() + 2 > 32)
         {
-            throw std::invalid_argument("value must have size <= 128 bytes, it's algorithm requirements, real size is [" + value.size() * sizeof(value[0]) + std::string("]"));
+            throw std::invalid_argument("value must have size <= 128 bytes, it's algorithm requirements, real size is [" + std::to_string(value.size() * sizeof(value[0])) + std::string("]"));
         }
 
         value.resize(32);
@@ -81,7 +81,7 @@ public:
     {
         if (value.size() > 32)
         {
-            throw std::invalid_argument("value must have size <= 128 bytes, it's algorithm requirements, real size is [" + value.size() * sizeof(value[0]) + std::string("], check if you get correct message"));
+            throw std::invalid_argument("value must have size <= 128 bytes, it's algorithm requirements, real size is [" + std::to_string(value.size() * sizeof(value[0])) + std::string("], check if you get correct message"));
         }
 
         mpz_class c = to_mpz_class(value);
