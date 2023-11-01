@@ -50,4 +50,13 @@ target_link_libraries(MD5 PRIVATE cryptopp::cryptopp)
 # GOST 34 10
 add_subdirectory(34-10)
 
+# ELGamal
+add_executable(ecelgamal EC-ELGamal/elgamal_ecc.c)
+
+find_package(OpenSSL REQUIRED)
+target_link_libraries(ecelgamal PRIVATE OpenSSL::SSL PkgConfig::gmp PkgConfig::gmpxx)
+
+# images
+add_subdirectory(Images)
+
 include_directories(${CMAKE_SOURCE_DIR}/utils/)

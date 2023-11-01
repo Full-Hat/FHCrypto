@@ -7,6 +7,10 @@
         "gmp",
         "pkgconf",
         "cryptopp",
-        "boost-multiprecision"
+        "boost-multiprecision",
+        "openssl",
+        "uthash",
+        "boost-filesystem",
+        "opencv"
     ]
 }

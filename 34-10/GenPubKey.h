@@ -1,4 +1,8 @@
+#include <string>
+#include <vector>
 
+using std::string;
+using std::vector;
 
 void get_priv_key(string &file_name, uint8_t* priv_key, size_t size)
 {
